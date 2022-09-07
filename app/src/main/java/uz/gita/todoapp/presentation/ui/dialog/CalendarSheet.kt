@@ -15,9 +15,7 @@ import java.util.*
 import javax.inject.Inject
 import kotlin.collections.ArrayList
 
-class CalendarSheet @Inject constructor(
-    private val useCase: AppUseCase
-): BottomSheetDialogFragment() {
+class CalendarSheet: BottomSheetDialogFragment() {
     private lateinit var binding: ScreenCalendarViewBinding
     private val listEvents: List<EventDay> = ArrayList()
     private val calendar = Calendar.getInstance()
