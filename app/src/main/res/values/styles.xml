@@ -19,7 +19,7 @@
         <item name="buttonBarButtonStyle">@style/ButtonBarStyle</item>
     </style>
 
-    <style name="ButtonBarStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+    <style name="ButtonBarStyle" parent="Theme.AppCompat.Dialog">
         <item name="android:textColor">@color/colorAccent</item>
     </style>
 

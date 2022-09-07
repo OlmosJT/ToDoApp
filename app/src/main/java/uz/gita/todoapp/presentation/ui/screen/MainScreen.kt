@@ -11,6 +11,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.PopupMenu
+import androidx.annotation.ColorRes
 import androidx.appcompat.widget.AppCompatButton
 import androidx.core.content.ContextCompat
 import androidx.core.content.getSystemService
@@ -123,7 +124,7 @@ class MainScreen : Fragment(R.layout.screen_main) {
             popupMenu.setOnMenuItemClickListener {
                 when (it.itemId) {
                     R.id.menuDelete -> {
-                        val dialog = AlertDialog.Builder(requireContext(), R.style.AppTheme_Dialog)
+                        val dialog = AlertDialog.Builder(requireContext(), com.google.android.material.R.style.MaterialAlertDialog_MaterialComponents_Title_Text)
                         dialog
                             .setTitle(R.string.delete_confirmation)
                             .setMessage(R.string.sureToDelete)
@@ -146,7 +147,7 @@ class MainScreen : Fragment(R.layout.screen_main) {
                     }
                     R.id.menuUpdate -> {}
                     R.id.menuComplete -> {
-                        val dialog = AlertDialog.Builder(requireContext(), R.style.AppTheme_Dialog)
+                        val dialog = AlertDialog.Builder(requireContext(), com.google.android.material.R.style.MaterialAlertDialog_Material3_Title_Text)
                         dialog
                             .setTitle(R.string.confirmation)
                             .setMessage(R.string.sureToMarkAsComplete)
@@ -181,7 +182,7 @@ class MainScreen : Fragment(R.layout.screen_main) {
     }
 
     private fun showCompleteDialog(taskModel: TaskModel) {
-        val dialog = Dialog(requireContext(), R.style.AppTheme)
+        val dialog = Dialog(requireContext(), R.style.AppTheme_Dialog)
         dialog.setContentView(R.layout.dialog_completed_theme)
         val closeButton: AppCompatButton = dialog.findViewById(R.id.closeButton) as AppCompatButton
         closeButton.setOnClickListener {
