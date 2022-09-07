@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">ToDoApp</string>
+    <string name="delete_confirmation">Confirmation</string>
+    <string name="sureToDelete">Are you sure you want to delete the task?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="confirmation">Completed the task!..</string>
+    <string name="sureToMarkAsComplete">Are you sure you want to mark this task as completed.</string>
+    <string name="congrats_you_have_completed_the_task_successfully">Congrats! You have completed the task successfully!</string>
+    <string name="hint_date">dd-mm-yyyy</string>
+    <string name="hint_task_time">hh:mm</string>
+    <string name="hint_task_title">Your title</string>
+    <string name="hint_task_desc">Your task description</string>
+    <string name="hint_event">your task event</string>
+    <string name="btn_add_task">Add task</string>
+    <string name="task_notification_channel_id" translatable="false">task_channel</string>
+    <string name="notification_title">Your Task Manager reminds you to do</string>
+    <string name="notification_done">Done</string>
+    <string name="task_notification_channel_name" translatable="true">TODO</string>
+</resources>

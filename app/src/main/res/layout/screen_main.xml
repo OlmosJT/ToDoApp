@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorBackground"
+    android:paddingHorizontal="20dp"
+    tools:context=".presentation.ui.screen.MainScreen">
+
+    <ImageView
+        android:id="@+id/imgEmptyData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/first_note"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/txtHello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Hello"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtAllTasks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All tasks"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
+        android:textSize="28sp"
+        tools:ignore="MissingPrefix"
+        app:layout_constraintTop_toBottomOf="@id/txtHello"
+        app:layout_constraintStart_toStartOf="@id/txtHello"/>
+
+    <ImageView
+        android:id="@+id/calendar"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:padding="8dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:src="@drawable/calendar"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/txtAllTasks"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txtHello" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/taskRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:listitem="@layout/item_task"
+        app:layout_constraintBottom_toTopOf="@+id/addTask"
+        app:layout_constraintTop_toBottomOf="@id/txtAllTasks"
+        />
+
+    <TextView
+        android:id="@+id/addTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Task"
+        android:textSize="21sp"
+        android:textColor="@color/colorAccent"
+        android:drawableStart="@drawable/ic_add_black_24dp"
+        android:drawablePadding="10dp"
+        android:padding="8dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
